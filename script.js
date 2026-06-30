@@ -175,29 +175,5 @@ canvas.addEventListener("mousemove",(e)=>{
     mouseY = e.offsetY;
 });
 
-canvas.addEventListener("touchstart", (e) => {
-    e.preventDefault();      
-    isMouseDown = true;
-    updateMouseFromTouch(e);
-});
-
-canvas.addEventListener("touchend", (e) => {
-    e.preventDefault();
-    isMouseDown = false;
-});
-
-canvas.addEventListener("touchmove", (e) => {
-    e.preventDefault();
-    updateMouseFromTouch(e);
-});
-
-function updateMouseFromTouch(e) {
-    const touch = e.touches[0]; // First touch
-    if (touch) {
-        const rect = canvas.getBoundingClientRect();
-        mouseX = touch.clientX - rect.left;
-        mouseY = touch.clientY - rect.top;
-    }
-}
 animate();
 
