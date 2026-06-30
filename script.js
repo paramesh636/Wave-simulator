@@ -24,7 +24,7 @@ let mouseY = 0;
 function stepSimulation(){
 
     let c2 = c * c;
-    let damping = 0.95;
+    let damping = 0.9999999;
 
     for(let y = 1;y < height - 1;y++){
         for(let x = 1;x < width - 1;x++){
