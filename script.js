@@ -48,7 +48,7 @@ function timeForward(){
     next = temp;
 }
 
-function render(){
+/*function render(){
 
     for(let i = 0; i < current.length; i ++){
 
@@ -66,9 +66,9 @@ function render(){
     }
 
     ctx.putImageData(imageData,0,0);
-}
+}*/
 
-/*function render(){
+function render(){
 
     // light direction (tweak these)
     let lightX = 0.5;
@@ -121,7 +121,7 @@ function render(){
     }
 
     ctx.putImageData(imageData, 0, 0);
-}*/
+}
 
 
 function inject(x,y){
