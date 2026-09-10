@@ -4,7 +4,7 @@ let ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-let c = 0.9;
+let c = 4;
 let waves = [];
 let width = canvas.width;
 let height = canvas.height;
