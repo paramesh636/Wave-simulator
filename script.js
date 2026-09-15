@@ -161,16 +161,24 @@ function animate(){
 
 }
 
-canvas.addEventListener("mousedown",(e)=>{
+canvas.addEventListener("pointerdown", (e) => {
     isMouseDown = true;
+
+    mouseX = e.offsetX;
+    mouseY = e.offsetY;
+
+    inject(mouseX, mouseY);
 });
 
-canvas.addEventListener("mouseup",(e)=>{
+canvas.addEventListener("pointerup", () => {
     isMouseDown = false;
 });
 
-canvas.addEventListener("mousemove",(e)=>{
+canvas.addEventListener("pointercancel", () => {
+    isMouseDown = false;
+});
 
+canvas.addEventListener("pointermove", (e) => {
     mouseX = e.offsetX;
     mouseY = e.offsetY;
 });
